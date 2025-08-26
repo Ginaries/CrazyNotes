@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://cljpfldmvxnns"]
+
+[ext_resource type="Texture2D" uid="uid://cygut8mgj27mu" path="res://assets/fondonormalCrazyNotes!.png" id="1_15se8"]
+[ext_resource type="Script" uid="uid://dkvvolv8kku1v" path="res://script/menu.gd" id="1_xs5te"]
+[ext_resource type="Texture2D" uid="uid://dgqt7hieyjm1n" path="res://assets/CrazyNotes!titulo3.png" id="2_xs5te"]
+[ext_resource type="Texture2D" uid="uid://ds755i6fp8o44" path="res://assets/botonplay1CrazyNotes!.png" id="3_vi6sp"]
+[ext_resource type="Texture2D" uid="uid://b16nbs1i58u4i" path="res://assets/botonplay2CrazyNotes!.png" id="4_1qlln"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xs5te")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+scale = Vector2(0.666721, 0.666535)
+texture = ExtResource("1_15se8")
+
+[node name="CrazyNotes!titulo3" type="Sprite2D" parent="."]
+position = Vector2(632, 204)
+texture = ExtResource("2_xs5te")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 394.0
+offset_top = 400.0
+offset_right = 1344.0
+offset_bottom = 650.0
+scale = Vector2(0.514359, 0.630583)
+texture_normal = ExtResource("3_vi6sp")
+texture_hover = ExtResource("4_1qlln")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 932.0
+offset_top = 15.0
+offset_right = 1221.0
+offset_bottom = 55.0
+bbcode_enabled = true
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

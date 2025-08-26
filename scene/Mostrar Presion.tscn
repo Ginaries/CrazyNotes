@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://chgp7ctmw67ep"]
+
+[ext_resource type="Script" uid="uid://b4gyj7i4fug5g" path="res://script/mostrar_presion.gd" id="1_jxbl3"]
+
+[node name="Presionado" type="Node2D"]
+scale = Vector2(0.1, 0.1)
+script = ExtResource("1_jxbl3")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_left = 247.0
+offset_top = 479.0
+offset_right = 903.0
+offset_bottom = 607.0
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect3" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect4" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect5" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2

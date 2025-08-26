@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://btb4tf0krxqxe"]
+
+[ext_resource type="Script" uid="uid://beah6oqsdve8b" path="res://script/notas.gd" id="1_w03eh"]
+
+[node name="NOTAS" type="Node2D"]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_w03eh")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(486, 190)
