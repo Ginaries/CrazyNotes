@@ -14,6 +14,7 @@ func _ready() -> void:
 	Save.puntos=0
 	AgregarNotaUnica()
 	_actualizar_puntaje()
+	
 
 func AgregarNotaUnica():
 	nota = NOTAS.instantiate()
@@ -30,12 +31,16 @@ func AgregarNotaUnica():
 func _on_descuento_timeout() -> void:
 	progress_bar.value -= 1
 	if progress_bar.value <= 0:
+		AudioPlayer.get_node("bg_music").stop()
+		AudioPlayer.musicafinal()
 		_game_over()
 
 func _game_over():
 	print("💀 Game Over!")
 	_save_highscore()
 	get_tree().change_scene_to_file("res://scene/game_over.tscn")
+	
+
 
 func _save_highscore():
 	if Save.puntos > Save.highscore:

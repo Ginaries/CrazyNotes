@@ -51,6 +51,7 @@ func Comprobar():
 
 		var index = input_actual.size() - 1
 		if input_actual[index] != patron_actual[index]:
+			AudioPlayer.sonidoerror()
 			Save.puntos -= 1
 			if Save.puntos <= 0:
 				Save.puntos = 0
@@ -59,6 +60,7 @@ func Comprobar():
 			emit_signal("Incorrecto") # <- ahora se distingue
 			emit_signal("LimpiarFlechas")
 		elif input_actual.size() == patron_actual.size():
+			AudioPlayer.sonidocorrecto()
 			Save.puntos += 10
 			print("✅ Patrón completado correctamente!")
 			input_actual.clear()

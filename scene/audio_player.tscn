@@ -1,10 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://bheoxb4dehf2s"]
+[gd_scene load_steps=6 format=3 uid="uid://bheoxb4dehf2s"]
 
 [ext_resource type="Script" uid="uid://bge3av4xig5v4" path="res://script/audio_player.gd" id="1_ra1kg"]
-[ext_resource type="AudioStream" uid="uid://bhfjw1dq1bpn6" path="res://audio/014815_building-tension-56926 (mp3cut.net).mp3" id="2_oaie0"]
+[ext_resource type="AudioStream" uid="uid://unhqg875yoxs" path="res://audio/error.mp3" id="2_ny71m"]
+[ext_resource type="AudioStream" uid="uid://b77rh46jf6sos" path="res://audio/014815_building-tension-56926 (mp3cut.net).mp3" id="2_oaie0"]
+[ext_resource type="AudioStream" uid="uid://bd0m4plyblv87" path="res://audio/correcto.mp3" id="4_qk0o4"]
+[ext_resource type="AudioStream" uid="uid://c1n1q58n4oggy" path="res://audio/gameover.mp3" id="5_3yvke"]
 
-[node name="AudioController" type="Node"]
+[node name="AudioPlayer" type="Node"]
 script = ExtResource("1_ra1kg")
+
+[node name="error" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_ny71m")
 
 [node name="bg_music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_oaie0")
+
+[node name="correcto" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_qk0o4")
+
+[node name="gameover" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_3yvke")

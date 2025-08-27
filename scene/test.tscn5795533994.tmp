@@ -1,0 +1,77 @@
+[gd_scene load_steps=9 format=3 uid="uid://u4605u32xhxf"]
+
+[ext_resource type="Script" uid="uid://dljucjw34ky6v" path="res://script/test.gd" id="1_fghjm"]
+[ext_resource type="PackedScene" uid="uid://chgp7ctmw67ep" path="res://scene/Mostrar Presion.tscn" id="2_bp0px"]
+[ext_resource type="Texture2D" uid="uid://ckx4ujybbbtpf" path="res://assets/progressbarCrazyNotes!.png" id="4_1ifl7"]
+[ext_resource type="Texture2D" uid="uid://cpj6dduk4k2qq" path="res://assets/fondopantallanormalCrazyNotes!.png" id="4_u3ux8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fghjm"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bp0px"]
+texture = SubResource("AtlasTexture_fghjm")
+modulate_color = Color(0, 0.403922, 0.670588, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5u11y"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u3ux8"]
+texture = SubResource("AtlasTexture_5u11y")
+modulate_color = Color(0.225609, 0.996799, 1, 1)
+
+[node name="test" type="Node2D"]
+script = ExtResource("1_fghjm")
+metadata/_edit_vertical_guides_ = [649.0, -370.0]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+scale = Vector2(0.667479, 0.671146)
+texture = ExtResource("4_u3ux8")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 489.0
+offset_top = 51.0
+offset_right = 803.0
+offset_bottom = 79.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/background = SubResource("StyleBoxTexture_bp0px")
+theme_override_styles/fill = SubResource("StyleBoxTexture_u3ux8")
+max_value = 10.0
+value = 10.0
+show_percentage = false
+
+[node name="Timer" type="Timer" parent="ProgressBar"]
+autostart = true
+
+[node name="DESCUENTO" type="Timer" parent="."]
+autostart = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 900.0
+offset_top = 20.0
+offset_right = 1266.0
+offset_bottom = 69.0
+
+[node name="label_puntos" type="RichTextLabel" parent="."]
+offset_left = 964.0
+offset_top = 45.0
+offset_right = 1250.0
+offset_bottom = 84.0
+
+[node name="Presionado" parent="." instance=ExtResource("2_bp0px")]
+position = Vector2(437, 581)
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+offset_left = 390.0
+offset_top = 40.0
+offset_right = 888.0
+offset_bottom = 96.0
+texture = ExtResource("4_1ifl7")
+expand_mode = 1
+
+[connection signal="timeout" from="ProgressBar/Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="DESCUENTO" to="." method="_on_descuento_timeout"]
