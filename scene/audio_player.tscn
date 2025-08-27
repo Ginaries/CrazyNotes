@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bheoxb4dehf2s"]
+
+[ext_resource type="Script" uid="uid://bge3av4xig5v4" path="res://script/audio_player.gd" id="1_ra1kg"]
+[ext_resource type="AudioStream" uid="uid://bhfjw1dq1bpn6" path="res://audio/014815_building-tension-56926 (mp3cut.net).mp3" id="2_oaie0"]
+
+[node name="AudioController" type="Node"]
+script = ExtResource("1_ra1kg")
+
+[node name="bg_music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_oaie0")

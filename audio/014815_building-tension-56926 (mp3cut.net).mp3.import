@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bhfjw1dq1bpn6"
+path="res://.godot/imported/014815_building-tension-56926 (mp3cut.net).mp3-6a0b3f190e51850969391891dab3658b.mp3str"
+
+[deps]
+
+source_file="res://audio/014815_building-tension-56926 (mp3cut.net).mp3"
+dest_files=["res://.godot/imported/014815_building-tension-56926 (mp3cut.net).mp3-6a0b3f190e51850969391891dab3658b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
